@@ -10,6 +10,7 @@ import { BarLoader } from "react-spinners";
 import { Authenticated, Unauthenticated } from "convex/react";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import { ModeToggle } from "./toggle";
 
 export default function Header() {
   const { isLoading } = useStoreUser();
@@ -84,6 +85,7 @@ export default function Header() {
             </SignUpButton>
           </Unauthenticated>
         </div>
+        {/* <div><ModeToggle /></div> */}
       </nav>
       {isLoading && <BarLoader width={"100%"} color="#36d7b7" />}
     </header>
